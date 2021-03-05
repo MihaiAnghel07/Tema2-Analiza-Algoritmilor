@@ -1,0 +1,33 @@
+Nume: Anghel Mihai-Gabriel
+Grupa: 323CD
+
+Task1:
+Relatiile dintre familii le-am salvat in 2 vectori 'u' si 'v'.
+Folosesc o marice 'x' pentru a forma variabilele. Matricea are 'N' linii si 'K' coloane avand urmatoarea semnificatie: fiecare variabila x[i][j] este o posibila asignare a spionului 'j' cu familia 'i'.
+
+Exista 3 constrangeri pe care trebuie sa le formulam pentru a genera corect clauzele: 
+ a) "in fiecare familie trebuie sa existe cel putin un spion infiltrat"
+ b) "in fiecare familie trebuie sa existe cel mult un spion infiltrat"
+ c) "in familiile care se inteleg trebuie sa fie infiltrati spioni diferiti"
+
+Am observat ca problema noastra este echivalenta cu problema "k-colors" si am cautat mai multe informatii despre formarea clauzelor pentru a intelege cum trebuie sa fac implementarea si m-am ajutat de: 
+1) https://www.cs.cmu.edu/~emc/15-820A/assignments/solution1.pdf [ultima accesare: 24.01.2021]
+2) https://www.youtube.com/watch?v=HhFSgXbWiWY&ab_channel=Udacity [ultima accesare: 24.01.2021]
+
+Complexitatea acestui task provine majoritar din formulate_oracle_question()
+Aceasta arata astfel: theta(N*K + N*K + N*(K - 1)*K/2 + K*M) = theta(2*N*K + N*(K - 1)*K/2 + K*M) = theta(N*K + N*K^2 + K*M) = theta(K*(N + N*K + M))
+
+
+Task2:
+Pentru acest task m-am folosit de indicatiile pergament. Am generat variabilele necesare, iar apoi cele 3 constrangeri din pergament.
+Nu am stiut cum sa ofer o detaliere si o explicatie a constrangerilor mai bune decat ofera pergamentul.
+
+Complexitatea acestui task provine majoritar din formulate_oracle_question() (asemenea task1)
+Aceasta arata astfel: theta(K*N + K*N + K*(K - 1)*N*N - 2*M - N + K*(K - 1)*N + K*N*(N - 1)) = theta(2*K*N + K^2*N^2 - 2*M - N + K^2*N + k*N^2) = theta(K*N*(2 + K*N + K + N) - 2*M - N)
+
+
+
+
+
+
+
